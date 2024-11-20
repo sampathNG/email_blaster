@@ -37,6 +37,7 @@ export default function Home() {
         message,
         recipients: emailList,
       });
+      console.log(email, subject, message, emailList);
       // Check response status
       if (response.data.success) {
         setStatus("Emails sent successfully!");
@@ -71,7 +72,7 @@ export default function Home() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="w-full p-1 border rounded focus:ring-2 focus:ring-blue-500"
-            placeholder="email1@example.com"
+            placeholder="email1@example.com sender email"
             required
           />
         </div>

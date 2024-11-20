@@ -141,9 +141,6 @@ export async function POST(req) {
       subject: subject,
       text: message,
       html: htmlContent,
-      // .replace(/#DATE#/g, new Date().toLocaleDateString())
-      // .replace(/#AMOUNT#/g, amount)
-      // .replace(/#RANDOM#/g, random),
       replyTo: email,
     });
     return NextResponse.json({ success: true });
